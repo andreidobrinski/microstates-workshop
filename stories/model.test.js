@@ -25,4 +25,7 @@ export default () => describe('Model', function() {
   it('has isValidEmail false when email does not have @', function() {
     expect(incorrectEmail.state.isValidEmail).toEqual(false)
   })
+  it('is invalid when email has no @', function() {
+    expect(incorrectEmail.state.isValid).toEqual(false)
+  })
 })

@@ -5,10 +5,10 @@ export default class LoginModel {
   password = MS.String
 
   get isValid() {
-    return this.email !== '' && this.password !== ''
+    return this.isValidEmail && this.password !== ''
   }
 
   get isValidEmail() {
-    return this.email.indexOf('@') !== -1;
+    return this.email !== '' && this.email.indexOf('@') !== -1;
   }
 }
