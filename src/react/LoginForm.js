@@ -1,12 +1,20 @@
 import React from 'react'
+import connect from './connect'
+import Model from '../model'
 
-export default function ReactLoginForm(props) {
+function ReactLoginForm(props) {
+  const { model, actions } = props
   return (
     <form className="log-in-form">
       <h4 className="text-center">Log in with you email account</h4>
       <label>
         Email
-        <input type="email" placeholder="somebody@example.com" />
+        <input
+          type="email"
+          placeholder="somebody@example.com"
+          value={model.email}
+          onInput={e => actions.email.set(e.target.value)}
+        />
       </label>
       <label>
         Password
@@ -20,3 +28,5 @@ export default function ReactLoginForm(props) {
     </form>
   )
 }
+
+export default connect(Model, ReactLoginForm)
