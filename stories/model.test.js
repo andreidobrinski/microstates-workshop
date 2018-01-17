@@ -28,4 +28,10 @@ export default () => describe('Model', function() {
   it('is invalid when email has no @', function() {
     expect(incorrectEmail.state.isValid).toEqual(false)
   })
+
+  it('makes the form valid when email address has an @', function() {
+    let afterInput = incorrectEmail.email.set('hello@world.com')
+    expect(afterInput.state.email).toEqual('hello@world.com')
+    expect(afterInput.state.isValid).toEqual(true)
+  })
 })
