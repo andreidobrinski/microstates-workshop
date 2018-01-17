@@ -7,4 +7,8 @@ export default class LoginModel {
   get isValid() {
     return this.email !== '' && this.password !== ''
   }
+
+  get isValidEmail() {
+    return this.email.indexOf('@') !== -1;
+  }
 }

@@ -15,4 +15,14 @@ export default () => describe('Model', function() {
   it('is invalid when email and password are empty', function() {
     expect(ms.state.isValid).toEqual(false)
   })
+
+  let msFilled = microstate(Model, { email: 'hello@world.com', password: '****' })
+  it('is valid when email and password are not empty', function() {
+    expect(msFilled.state.isValid).toEqual(true)
+  })
+
+  let incorrectEmail = microstate(Model, { email: 'hello', password: '****' })
+  it('has isValidEmail false when email does not have @', function() {
+    expect(incorrectEmail.state.isValidEmail).toEqual(false)
+  })
 })
