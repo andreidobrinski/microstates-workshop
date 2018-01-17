@@ -21,6 +21,8 @@ function ReactLoginForm(props) {
         <input
           type="password"
           placeholder="Password"
+          value={model.password}
+          onChange={e => actions.password.set(e.target.value)}
         />
       </label>
       <input
