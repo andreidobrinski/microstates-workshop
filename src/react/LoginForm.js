@@ -13,7 +13,7 @@ function ReactLoginForm(props) {
           type="email"
           placeholder="somebody@example.com"
           value={model.email}
-          onInput={e => actions.email.set(e.target.value)}
+          onChange={e => actions.email.set(e.target.value)}
         />
       </label>
       <label>
