@@ -35,6 +35,7 @@ function ReactLoginForm(props) {
           type="submit"
           className="button expanded"
           value="Log in"
+          disabled={!model.isValid}
         />
       </p>
     </form>
