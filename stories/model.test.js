@@ -5,7 +5,8 @@ import Model from '../src/model'
 import microstate from 'microstates'
 
 export default () => describe('Model', function() {
-    it('has email address field', function() {
-      expect(ms.state.email).toExist()
-    })
+  let ms = microstate(Model)
+  it('has an empty email field', function() {
+    expect(ms.state.email).toEqual('')
+  })
 })
