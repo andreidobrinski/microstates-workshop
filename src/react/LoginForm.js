@@ -18,12 +18,22 @@ function ReactLoginForm(props) {
       </label>
       <label>
         Password
-        <input type="password" placeholder="Password" />
+        <input
+          type="password"
+          placeholder="Password"
+        />
       </label>
-      <input id="show-password" type="checkbox" />
+      <input
+        id="show-password"
+        type="checkbox"
+      />
       <label htmlFor="show-password">Show password</label>
       <p>
-        <input type="submit" className="button expanded" value="Log in" />
+        <input
+          type="submit"
+          className="button expanded"
+          value="Log in"
+        />
       </p>
     </form>
   )
