@@ -12,4 +12,7 @@ export default () => describe('Model', function() {
   it('has an empty password field', function() {
     expect(ms.state.password).toEqual('')
   })
+  it('is invalid when email and password are empty', function() {
+    expect(ms.state.isValid).toEqual(false)
+  })
 })
